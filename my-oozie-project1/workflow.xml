@@ -5,7 +5,7 @@
 			<job-tracker>hdfs://ip-172-31-25-122.eu-west-3.compute.internal:8050</job-tracker>
 			<name-node>hdfs://ip-172-31-25-122.eu-west-3.compute.internal:8020</name-node>
 			<exec>create_file.sh</exec>
-			<file>hdfs:///user/helmi/oozie_exemple/lib/create_file.sh#create_file.sh</file>
+			<file>hdfs:///user/helmi/my-oozie-project1/lib/create_file.sh#create_file.sh</file>
 		</shell>
 		
       <ok to = "end" />
