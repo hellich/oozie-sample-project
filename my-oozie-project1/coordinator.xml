@@ -6,7 +6,7 @@
    </controls>
    <action>
       <workflow>
-         <app-path>hdfs:///user/helmi/oozie_exemple/workflow.xml</app-path>
+         <app-path>hdfs:///user/helmi/my-oozie-project1/workflow.xml</app-path>
       </workflow>
    </action>
 
