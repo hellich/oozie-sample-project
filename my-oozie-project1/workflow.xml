@@ -1,0 +1,19 @@
+<workflow-app xmlns = "uri:oozie:workflow:0.4" name = "simple-Workflow">
+   <start to = "create_empty_file" />
+   <action name = "create_empty_file">
+	  <shell xmlns="uri:oozie:shell-action:0.2">
+			<job-tracker>hdfs://ip-172-31-25-122.eu-west-3.compute.internal:8050</job-tracker>
+			<name-node>hdfs://ip-172-31-25-122.eu-west-3.compute.internal:8020</name-node>
+			<exec>create_file.sh</exec>
+			<file>hdfs:///user/helmi/oozie_exemple/lib/create_file.sh#create_file.sh</file>
+		</shell>
+		
+      <ok to = "end" />
+      <error to = "kill_job" />
+   </action>
+   <kill name = "kill_job">
+      <message>Job failed</message>
+   </kill>
+   <end name = "end" />
+</workflow-app>
+
